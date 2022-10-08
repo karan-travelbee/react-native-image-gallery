@@ -201,7 +201,7 @@ const ImageGallery = (props: IProps & typeof defaultProps) => {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: 'black',
+    backgroundColor: '#353535',
     flex: 1,
     height: deviceHeight,
     justifyContent: 'center',
