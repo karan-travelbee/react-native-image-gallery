@@ -121,6 +121,10 @@ const ImageGallery = (props: IProps & typeof defaultProps) => {
 
   useEffect(() => {
     if (isOpen && initialIndex) {
+      setTimeout(() => {
+        scrollToIndex(initialIndex)  
+      }, 100);
+     
       setActiveIndex(initialIndex);
     } else if (!isOpen) {
       setActiveIndex(0);
@@ -170,7 +174,7 @@ const ImageGallery = (props: IProps & typeof defaultProps) => {
         </SwipeContainer>
         {hideThumbs ? null : (
           <FlatList
-            initialScrollIndex={initialIndex}
+          //initialScrollIndex={initialIndex}
             getItemLayout={getThumbLayout}
             contentContainerStyle={styles.thumbnailListContainer}
             data={props.images}
